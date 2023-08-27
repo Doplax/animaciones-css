@@ -226,7 +226,7 @@ body {
 
 
 
-/* //////////////////////////////////////////////////////// */
+/*  Rabbit  */
 
 .ear_left {
     position: absolute;
@@ -279,24 +279,54 @@ body {
     top: 30px;
 }
 
+/* Left Eye */
 .head::before {
     content: "";
     position: absolute;
     background-color: black;
-    border-radius: 50%;
+    border-radius: 2.5px;
     width: 5px;
     height: 5px;
     left: 25px;
     top: 20px;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
+/* Right Eye */
 .head::after {
     content: "";
     position: absolute;
     background-color: black;
-    border-radius: 50%;
+    border-radius: 2.5px;
     width: 5px;
     height: 5px;
     right: 25px;
     top: 20px;
+   
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 5px;
+    }
+
+    10% {
+        height: 1px;
+        transform: translate(0px,2px);
+
+    }
+
+    30% {
+    transform: translate(0px,0px);
+
+        height: 5px;
+    }
+
+
 }
