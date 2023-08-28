@@ -31,31 +31,16 @@ body {
     width: 80px;
     height: 520px;
     bottom: 0;
-    left: 70px;
+    left: 70px;   
 
-    animation-name: layer;
-    animation-duration: 1s;
+    animation-name: bunny0;
     animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-iteration-count:infinite
 }
 
-@keyframes layer {
-    0% {
-        bottom: 0;
-    }
 
-    25% {
-        bottom: 10;
-    }
 
-    100%{
-        bottom: 0;
-    }
-}
-
-.layer_1 input[type=checkbox] {
-    animation-name: layer;
-}
 
 /* Bunny */
 .layer_2 {
@@ -65,6 +50,11 @@ body {
     height: 520px;
     bottom: 0;
     right: 70px;
+
+    animation-name: bunny1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count:infinite
 }
 
 /* highest mountain */
@@ -91,6 +81,11 @@ body {
     height: 380px;
     bottom: 0;
     left: 50px;
+
+    animation-name: bunny2;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count:infinite
 }
 
 /* Middle Mountain */
@@ -114,6 +109,11 @@ body {
     height: 250px;
     bottom: 0;
     right: 50px;
+
+    animation-name: bunny0;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-iteration-count:infinite
 }
 
 /* Lower Mountain */
@@ -340,24 +340,4 @@ body {
     animation-name: blink;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-}
-
-@keyframes blink {
-    0% {
-        height: 5px;
-    }
-
-    10% {
-        height: 1px;
-        transform: translate(0px,2px);
-
-    }
-
-    30% {
-    transform: translate(0px,0px);
-
-        height: 5px;
-    }
-
-
 }

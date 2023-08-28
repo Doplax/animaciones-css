@@ -1,0 +1,47 @@
+/* Parpadeo  */
+@keyframes blink { 
+    0% {
+        height: 5px;
+    }
+
+    10% {
+        height: 1px;
+        transform: translate(0px,2px);
+    }
+
+    30% {
+    transform: translate(0px,0px);
+        height: 5px;
+    }
+}
+/* Bunnies */
+@keyframes bunny0{
+    0%{bottom: 0;}
+    5%{bottom: 4px;}
+    10%{bottom: -40px;}
+    15%{bottom: -44px;}
+    20%{bottom:0px;}
+    22%{bottom: 4px;}
+    25%{bottom: 0;}
+    30%{bottom: 4px;}
+    40%{bottom: -40px;}
+    45%{bottom: -44px;}
+    50%{bottom:0px;}
+    52%{bottom: 4px;}
+    60%{bottom: -53px;}
+    80%{bottom: -53px;}
+}
+@keyframes bunny1 {
+    0%{bottom: 0;}
+    5%{bottom: 4px;}
+    20%{bottom: -100px;}
+    40%{bottom: -100px;}
+    50%{bottom: -50px;}
+}
+
+@keyframes bunny2{
+    0%{bottom: 0;}
+    5%{bottom: 5px;}
+    50%{bottom: -80px;}
+    90%{bottom: -80px;}
+}
