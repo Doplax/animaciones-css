@@ -1,4 +1,4 @@
-/* Contador con CSS */
+/* Counter with CSS */
 body {
   counter-reset: game;
 }
@@ -7,13 +7,27 @@ input:checked {
   counter-increment: game;
 }
 
+input[type="checkbox"]{
+    appearance: none;
+    cursor: pointer;
+    height: 80px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 80px;
+}
+
+input:focus{
+    appearance: none;
+    outline:none;
+}
+
 .total-count::after {
   content: counter(game);
 }
 
 /* CAPAS */
-
-
 body {
   display: grid;
   height: 100vh;
@@ -32,6 +46,7 @@ body {
     overflow: hidden;
 }
 
+/* Bunny */
 .layer_1 {
     position: absolute;
     z-index: 1;
@@ -39,8 +54,32 @@ body {
     height: 520px;
     bottom: 0;
     left: 70px;
+
+    animation-name: layer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: 10;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+.layer_1 input[type=checkbox] {
+    animation-name: layer;
+}
+
+/* Bunny */
 .layer_2 {
     position: absolute;
     z-index: 2;
@@ -49,6 +88,8 @@ body {
     bottom: 0;
     right: 70px;
 }
+
+/* highest mountain */
 .layer_3 {
     position: absolute;
     z-index: 3;
@@ -64,6 +105,7 @@ body {
     overflow: hidden;
 }
 
+/* Bunny */
 .layer_4 {
     position: absolute;
     z-index: 4;
@@ -72,6 +114,8 @@ body {
     bottom: 0;
     left: 50px;
 }
+
+/* Middle Mountain */
 .layer_5 {
     position: absolute;
     z-index: 5;
@@ -84,6 +128,7 @@ body {
     overflow: hidden;
 }
 
+/* Bunny */
 .layer_6 {
     position: absolute;
     z-index: 6;
@@ -92,6 +137,8 @@ body {
     bottom: 0;
     right: 50px;
 }
+
+/* Lower Mountain */
 .layer_7 {
     position: absolute;
     z-index: 7;
@@ -105,6 +152,7 @@ body {
     overflow: hidden;
 }
 
+/* Floor */
 .layer_8 {
     position: absolute;
     z-index: 8;
@@ -152,7 +200,7 @@ body {
 
 
 
-
+/* Left cloud */
 .layer_9 {
     position: absolute;
     z-index: 9;
@@ -163,6 +211,8 @@ body {
     bottom: 0;
     left: -50px;
 }
+
+/* Right cloud */
 .layer_10 {
     position: absolute;
     z-index: 10;
@@ -187,7 +237,10 @@ body {
 }
 
 
-/* //////////////////////////////////////////////////////// */
+/* Zig Zag Mountain */
+/* https://dev.to/cchana/explained-creating-a-zigzag-pattern-with-just-css-13g1 */
+
+/* Green Zig Zag */
 .layer_3::after,
 .layer_5::after,
 .layer_7::after {
@@ -205,6 +258,7 @@ body {
     background-position: 140px 0 0 30px 0;
 }
 
+/* Brown Zig Zag */
 .layer_3::before,
 .layer_5::before,
 .layer_7::before {
@@ -226,8 +280,7 @@ body {
 
 
 
-/*  Rabbit  */
-
+/*  Rabbit boddy */
 .ear_left {
     position: absolute;
     background-color: white;
