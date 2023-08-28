@@ -5,7 +5,7 @@ body {
 
 
 input[type="checkbox"]{
-    /*appearance: none;*/
+    appearance: none;
     cursor: pointer;
     height: 80px;
     margin: 0;
@@ -25,7 +25,7 @@ input:checked{
     counter-increment: score;
 }
 .score::after{
-    content: "    "counter(score)
+    content: counter(score)
 }
 
 
