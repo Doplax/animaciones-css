@@ -1,39 +1,15 @@
-/* Counter with CSS */
-body {
-  counter-reset: game;
-}
 
-input:checked {
-  counter-increment: game;
-}
-
-input[type="checkbox"]{
-    appearance: none;
-    cursor: pointer;
-    height: 80px;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    width: 80px;
-}
-
-input:focus{
-    appearance: none;
-    outline:none;
-}
-
-.total-count::after {
-  content: counter(game);
-}
 
 /* CAPAS */
 body {
-  display: grid;
-  height: 100vh;
-  margin: 0;
-  place-items: center;
-  width: 100%;
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto' ,sans-serif;
+
 }
 .phone {
     position: relative;
@@ -45,6 +21,8 @@ body {
     background-color: #ccefff;
     overflow: hidden;
 }
+
+
 
 /* Bunny */
 .layer_1 {
